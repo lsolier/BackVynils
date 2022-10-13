@@ -1,3 +1,49 @@
+# Documentación
+## Modelo conceptual
+
+![](./docs/ConceptualModel.png)
+
+| Concepto |	Descripción |
+|:---|:---|
+|Album| 	Disco musical
+|ALBUM_STATUS| Enumeración del estado de un álbum (Active, Inactive)|
+|Collector| Coleccionista registrado en la aplicación que puede publicar y comentar álbumes|
+|CollectorAlbum| 	Clase de asociación entre el coleccionista y el álbum. Contiene información sobre los álbumes de coleccionista para venta o intercambio, en particular el precio y el estado (disponible o no disponible)|
+|Comment| 	Clase de asociación entre el coleccionista y el álbum. Contiene información sobre el contenido del comentario y el rating del álbum|
+|GENRE| 	Enumeración de los géneros musicales (Classical, Salsa, Rock, Folk)|
+|Performer| 	Artista que puede ser bien o una banda (Band) o un músico (Musician)|
+|PerformerPrize| 	Clase de asociación entre el artista y el premio. Guarda información sobre la fecha en la cual se le otorga el premio al artista|
+|Prize| 	Premio que es otorgado por una organización a un artista|
+|RECORD_LABEL| 	Enumeración de los sellos discográficos (Sony Music, EMI, Discos Fuentes, Elektra, Fania Record)|
+|Track| 	Pista musical del álbum|
+
+## Infraestructura
+
+Para el desarrollo del proyecto se cuenta con la siguiente infraestructura:
+
+### API REST
+
+Los servicios que usará el front son provistos por un API REST que está previamente desarrollado. Las herramientas en las cuales está construido son:
+|Elemento| 	Herramienta|
+|:---|:---|
+|Base de datos| 	Postgres|
+|Framework| 	Nest.js|
+|Lenguaje de programación| 	Typescript|
+|Repositorio| 	https://github.com/TheSoftwareDesignLab/BackVynils|
+
+#### Documentación del API
+
+![](./docs/DTOModel.png)
+
+> En la carpeta [collections](https://github.com/TheSoftwareDesignLab/BackVynils/tree/master/collections) encuentra archivos de postman para realizar peticiones a cara servicio.
+
+
+---
+
+# Detalles técnicos
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
